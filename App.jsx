@@ -1,7 +1,25 @@
 import React, { useMemo, useRef, useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { BookOpen, History, RotateCcw, Save, Shuffle, Sparkles } from "lucide-react";
+
+$1
+
+function Button({ className = "", children, ...props }) {
+  return (
+    <button
+      className={`inline-flex items-center justify-center rounded-xl px-4 py-2 font-semibold transition disabled:opacity-50 ${className}`}
+      {...props}
+    >
+      {children}
+    </button>
+  );
+}
+
+function Card({ className = "", children }) {
+  return <div className={className}>{children}</div>;
+}
+
+function CardContent({ className = "", children }) {
+  return <div className={className}>{children}</div>;
+}
 
 const STATUS = {
   ACTIVE: { code: "A", label: "ACTIVE", jp: "正常循環", tone: "text-emerald-300", bg: "bg-emerald-500/15", border: "border-emerald-400/40" },
